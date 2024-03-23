@@ -55,7 +55,7 @@ const Header = () => {
     }
     setTimeout(() => {
       setShowSearch(false)
-    }, 1000);
+    }, 10000);
   }
 
   const navigationHandler = (type) => {
