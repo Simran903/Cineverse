@@ -75,25 +75,13 @@ const Header = () => {
           <img src={logo} alt="logo" />
         </div>
         <ul className="menuItems">
-          <motion.div
-            className="box"
-            whileHover={{ scale: 1.1 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-          >
             <li className="menuItem" onClick={() => navigationHandler("movie")}>MOVIES</li>
-          </motion.div>
+          <li className="menuItem" onClick={() => navigationHandler("tv")}>TV SHOWS</li>
+          
           <motion.div
             className="box"
             whileHover={{ scale: 1.1 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-          >
-
-            <li className="menuItem" onClick={() => navigationHandler("tv")}>TV SHOWS</li>
-          </motion.div>
-          <motion.div
-            className="box"
-            whileHover={{ scale: 1.1 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            transition={{ type: "spring", stiffness: 400, damping: 30 }}
           >
 
             <li className="menuItem">
