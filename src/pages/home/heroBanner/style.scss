@@ -63,6 +63,15 @@
                 font-size: 24px;
             }
         }
+        .cursor{
+            background-color: var(--pink);
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
         .searchInput {
             display: flex;
             align-items: center;

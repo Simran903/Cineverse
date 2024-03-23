@@ -2,6 +2,15 @@
 .explorePage {
     min-height: 700px;
     padding-top: 100px;
+    .cursor{
+        background-color: var(--pink);
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
     .resultNotFound {
         font-size: 24px;
         color: var(--black-light);

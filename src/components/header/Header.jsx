@@ -4,9 +4,9 @@ import { SlMenu } from "react-icons/sl";
 import { VscChromeClose } from "react-icons/vsc";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./style.scss";
-
 import ContentWrapper from "../contentWrapper/ContentWrapper";
 import logo from '../../assets/logo.png'
+import { motion } from "framer-motion";
 
 const Header = () => {
   const [show, setShow] = useState("top") // for scrolling effect
@@ -75,11 +75,31 @@ const Header = () => {
           <img src={logo} alt="logo" />
         </div>
         <ul className="menuItems">
-          <li className="menuItem" onClick={() => navigationHandler("movie")}>MOVIES</li>
-          <li className="menuItem" onClick={() => navigationHandler("tv")}>TV SHOWS</li>
-          <li className="menuItem">
-            <HiOutlineSearch onClick={openSearch} />
-          </li>
+          <motion.div
+            className="box"
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          >
+            <li className="menuItem" onClick={() => navigationHandler("movie")}>MOVIES</li>
+          </motion.div>
+          <motion.div
+            className="box"
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          >
+
+            <li className="menuItem" onClick={() => navigationHandler("tv")}>TV SHOWS</li>
+          </motion.div>
+          <motion.div
+            className="box"
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          >
+
+            <li className="menuItem">
+              <HiOutlineSearch onClick={openSearch} />
+            </li>
+          </motion.div>
         </ul>
 
         <div className="mobileMenuItems">
