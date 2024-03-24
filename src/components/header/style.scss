@@ -11,7 +11,7 @@
     transition: all ease 0.5s;
     z-index: 2;
     &.top {
-        background: rgba(0, 0, 0, 0.175);
+        background: rgba(0, 0, 0, 0.659);
         backdrop-filter: blur(3.5px);
         -webkit-backdrop-filter: blur(3.5px);
     }
@@ -34,7 +34,8 @@
         }
     }
     .menuItems {
-        color: white;
+        color: var(--red);
+        font-weight: bolder;
         list-style-type: none;
         display: none;
         align-items: center;
@@ -56,14 +57,13 @@
             }
             cursor: pointer;
             &:hover {
-                color: var(--red);
                 transform: scale(1.2);
                 transition: 0.4s ease;
             }
         }
     }
 
-    .mobileMenuItems {
+    .mobileMenuItems {   
         display: flex;
         align-items: center;
         gap: 20px;
@@ -73,18 +73,19 @@
         }
         svg {
             font-size: 18px;
-            color: black;
+            color: var(--red);
         }
     }
 
     &.mobileView {
-        background: #ffe6e6bd;
+        background: #000;
         .menuItems {
+            color: var(--red);
             display: flex;
             position: absolute;
             top: 60px;
             left: 0;
-            background: #ffe6e6bd;
+            background: #000;
             flex-direction: column;
             width: 100%;
             padding: 20px 0;

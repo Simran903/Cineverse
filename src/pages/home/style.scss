@@ -2,6 +2,7 @@
     position: relative;
     margin-bottom: 70px;
     margin-top: 20px;
+    color: white;
     & > .contentWrapper {
         display: flex;
         align-items: center;
@@ -9,7 +10,6 @@
         margin-bottom: 20px;
     }
     .carouselTitle {
-        color: white;
         font-size: 24px;
         font-weight: normal;
         font-style: italic;
