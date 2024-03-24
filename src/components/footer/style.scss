@@ -1,9 +1,10 @@
 @import "../../mixins.scss";
 .footer {
-    background: linear-gradient(180deg, rgba(254,199,180,1) 18%, rgba(252,129,158,1) 99%);
+    background: var(--gradient);
     padding: 50px 0;
     position: relative;
     .contentWrapper {
+        color: var(--black);
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -58,9 +59,9 @@
             justify-content: center;
             cursor: pointer;
             transition: all ease 0.3s;
+            color: var(--red);
             &:hover {
-                box-shadow: 0 0 0.625em var(--red);
-                color: var(--red);
+                box-shadow: 0 0 0.725em var(--black);
             }
         }
     }

@@ -1,5 +1,6 @@
 @import "../../../mixins.scss";
 .videosSection {
+    color: var(--red);
     position: relative;
     margin-bottom: 50px;
     .sectionHeading {
@@ -79,8 +80,6 @@
                     font-size: 16px;
                     line-height: 24px;
                 }
-            }:hover {
-                color: #F7418F;
             }
         }
     }

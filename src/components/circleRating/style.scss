@@ -4,7 +4,7 @@
     .CircularProgressbar-text {
         font-size: 34px;
         font-weight: 700;
-        fill: #F7418F;
+        fill: var(--red);
     }
     .CircularProgressbar-trail {
         stroke: transparent;
