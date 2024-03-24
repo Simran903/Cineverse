@@ -31,10 +31,7 @@ const Explore = () => {
   const [genre, setGenre] = useState(null);
   const [sortby, setSortby] = useState(null);
   const { mediaType } = useParams();
-  const [mousePosition, setMousePosition] = useState({
-    x: 0,
-    y: 0
-})
+  
 
   const { data: genresData } = useFetch(`/genre/${mediaType}/list`);
 
@@ -97,36 +94,11 @@ const Explore = () => {
     setPageNum(1);
     fetchInitialData();
   };
-
-  useEffect(() => {
-
-    const mouseMove = (e) => {
-        setMousePosition({
-            x: e.clientX,
-            y: e.clientY,
-        })
-    }
-    window.addEventListener("mousemove", mouseMove)
-    return () => {
-        window.removeEventListener("mousemove", mouseMove)
-    }
-
-}, [])
-
-const variants = {
-    default: {
-        x: mousePosition.x,
-        y: mousePosition.y}
-}
+  
 
   return (
     <div className="explorePage">
-      <ContentWrapper>
-      <span className="subTitle">Where imagination meets reality, and every frame tells a story.</span>
-                    <motion.div
-                    className="cursor"
-                    variants={variants}
-                    animate="default" />
+      <ContentWrapper>                    
         <div className="pageHeader">
           <div className="pageTitle">
             {mediaType === "tv"
