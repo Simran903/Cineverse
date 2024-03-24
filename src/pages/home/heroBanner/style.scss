@@ -38,6 +38,7 @@
         left: 0;
     }
     .heroBannerContent {
+        color: white;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -86,7 +87,7 @@
                 padding: 0 15px;
                 font-size: 14px;
                 &:hover {
-                    box-shadow: 0 0 0.625em var(--pink);
+                    box-shadow: 0 0 0.625em #A0153E;
                 }
                 @include md {
                     width: calc(100% - 150px);
