@@ -12,36 +12,12 @@ const HeroBanner = () => {
     const navigate = useNavigate()
     const [background, setBackground] = useState("")
     const [query, setQuery] = useState("")
-    const [mousePosition, setMousePosition] = useState({
-        x: 0,
-        y: 0
-    })
     const { url } = useSelector((state) => state.home)
     const { data, loading } = useFetch("/movie/upcoming")
     useEffect(() => {
         const bg = url.backdrop + data?.results?.[Math.floor(Math.random() * 20)]?.backdrop_path
         setBackground(bg)
     }, [data])
-
-    useEffect(() => {
-        const mouseMove = (e) => {
-            setMousePosition({
-                x: e.clientX,
-                y: e.clientY,
-            })
-        }
-        window.addEventListener("mousemove", mouseMove)
-        return () => {
-            window.removeEventListener("mousemove", mouseMove)
-        }
-    }, [])
-
-    const variants = {
-        default: {
-            x: mousePosition.x,
-            y: mousePosition.y
-        }
-    }
 
     const searchQueryHandler = () => {
         if (query.length > 0) {
@@ -88,11 +64,6 @@ const HeroBanner = () => {
                             showCursor={true}
                         />
                     </span>
-                    <motion.div
-                        className="cursor"
-                        variants={variants}
-                        animate="default" />
-
                     <div className="searchInput">
                         <input
                             type="text"

@@ -11,30 +11,8 @@ import SearchResult from './pages/searchResult/SearchResult'
 import Explore from './pages/explore/Explore'
 import PageNotFound from './pages/404/PageNotFound'
 import { motion } from "framer-motion"
-import './App.scss'
-function App() {
-  const [mousePosition, setMousePosition] = useState({
-    x: 0,
-    y: 0
-})
-  useEffect(() => {
-    const mouseMove = (e) => {
-        setMousePosition({
-            x: e.clientX,
-            y: e.clientY,
-        })
-    }
-    window.addEventListener("mousemove", mouseMove)
-    return () => {
-        window.removeEventListener("mousemove", mouseMove)
-    }
-}, [])
 
-const variants = {
-    default: {
-        x: mousePosition.x,
-        y: mousePosition.y}
-}
+function App() {
 
   const dispatch = useDispatch()
   const { url } = useSelector((state) => state.home)
@@ -81,10 +59,6 @@ const variants = {
 
   return (
     <BrowserRouter>
-    <motion.div
-                    className="cursor"
-                    variants={variants}
-                    animate="default" />
     <Header />
       <Routes>
         <Route path="/" element={<Home />} />
