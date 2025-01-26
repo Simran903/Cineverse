@@ -61,9 +61,3 @@ The app will be available at `http://localhost:3000`.
 
 - [TMDB API](https://www.themoviedb.org/documentation/api) for the movie data.
 - Inspiration and support from the developer community.
-
-## Contact 📧  
-
-- **Simran**  
-  - [GitHub](https://github.com/Simran903)  
-  - [LinkedIn](https://www.linkedin.com/in/simran903/)  
